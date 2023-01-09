@@ -18,21 +18,22 @@ public class AccountPage {
     @FindBy(css = ".hello strong")
     private WebElement welcomeTextElement;
 
+    @FindBy(css = ".you p")
+    private WebElement goodbyeTextElement;
+
+    @FindBy(css = ".skip-active .empty")
+    private WebElement EmptyCartElement;
+
     public String getWelcomeText(){
         return welcomeTextElement.getText();
     }
-
-    @FindBy(css = ".you p")
-    private WebElement goodbyeTextElement;
 
     public String getGoodbyeText(){
         return goodbyeTextElement.getText();
     }
 
-    @FindBy(css = ".skip-active .empty")
-    private WebElement EmptyCartElement;
-
     public String getEmptyCartElement(){
         return EmptyCartElement.getText();
     }
+
 }
